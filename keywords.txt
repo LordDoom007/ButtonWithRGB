@@ -1,0 +1,8 @@
+ButtonWithRGB    KEYWORD1
+begin            KEYWORD2
+update           KEYWORD2
+getButtonState   KEYWORD2
+setRGB           KEYWORD2
+pulseRGB         KEYWORD2
+setPulseSpeed    KEYWORD2
+setDebounceDelay KEYWORD2
