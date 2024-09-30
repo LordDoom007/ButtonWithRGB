@@ -1,5 +1,3 @@
-# ButtonWithRGB
- 
 # ButtonWithRGB Library
 
 ## Übersicht
