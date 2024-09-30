@@ -18,7 +18,7 @@ The **ButtonWithRGB library** makes it possible to easily control a button with 
 3. restart the Arduino IDE.
 
 ## Use
-# Create object
+### Create object
 ```ButtonWithRGB button(2, 9, 10, 11);```
 
 example for creating a butten object with the pin assignment
@@ -31,7 +31,7 @@ Attention
 1. the RGB LED pins are controlled negatively!!!
 2. the butten uses the internal pulse resistor, so it must be connected to ground.
 
-# Initialise object
+### Initialise object
 ```button.begin();```
 Start the previously created object
 
