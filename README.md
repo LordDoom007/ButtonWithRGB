@@ -18,7 +18,7 @@ The **ButtonWithRGB library** makes it possible to easily control a button with 
 3. restart the Arduino IDE.
 
 ## Use
-```ButtonWithRGB button(2, 9, 10, 11);
+```ButtonWithRGB button(2, 9, 10, 11);```
 
 
 
