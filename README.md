@@ -75,8 +75,22 @@ Set the RGB color (0-255).
 ```cpp
 button.pulseRGB(255, 0, 0);
 ```
-
 Set the pulse RGB color (0-255). The LED pulses in the set color. However, care must be taken not to use any process-blocking codes such as `delay();`. Otherwise, the pulsing may be irregular or may not work at all.
+
+#### Set RGB pulse speed
+```cpp
+button.setPulseSpeed(50);
+```
+Sets the pulse speed in ms. If the function is not called, the default value is 30 ms.
+
+#### Set Button debounced time
+```cpp
+button.setDebounceDelay(100);
+```
+
+Sets the debounced time in ms. If the function is not called, the default value is 50 ms.
+
+
 
 ### Simple example application
 
