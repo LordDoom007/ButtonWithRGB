@@ -1,10 +1,10 @@
 # ButtonWithRGB Library
 
-## Übersicht
+## Overview
 
-Die `ButtonWithRGB`-Bibliothek bietet eine einfache Möglichkeit, einen Taster mit einer RGB-LED zu steuern. Sie unterstützt Funktionen zur Entprellung des Tasters, zur Steuerung der RGB-LED-Farben und zur Anpassung der Pulsfrequenz und Gamma-Korrektur.
+The **ButtonWithRGB library** makes it possible to easily control a button with an integrated RGB LED. It offers functions for **debouncing the button** and **controlling the RGB LED colours**.
 
-## Funktionen
+## Functions
 
 - **Tastersteuerung**: Entprellung des Tasters für eine zuverlässige Erkennung.
 - **RGB-LED-Steuerung**: Setzen der LED-Farbe und Pulsieren mit einstellbarer Geschwindigkeit.
@@ -13,18 +13,18 @@ Die `ButtonWithRGB`-Bibliothek bietet eine einfache Möglichkeit, einen Taster m
 
 ## Installation
 
-1. Lade die `ButtonWithRGB`-Bibliothek herunter oder klone das Repository.
-2. Kopiere den Ordner `ButtonWithRGB` in den `libraries`-Ordner deines Arduino-Sketchbook-Ordners.
-3. Starte die Arduino IDE neu.
+1. download the `ButtonWithRGB` library or clone the repository.
+2. copy the `ButtonWithRGB` folder into the `libraries` folder of your Arduino sketchbook folder.
+3. restart the Arduino IDE.
 
-## Verwendung
+## Use
 
-### Einfache Beispielanwendung
+### Simple example application
 
 ```cpp
 #include "ButtonWithRGB.h"
 
-ButtonWithRGB button(2, 9, 10, 11); // Taster an Pin 2, RGB-LED an Pins 9, 10, 11
+ButtonWithRGB button(2, 9, 10, 11); // Butten Pin 2, RGB-LED on Pins 9, 10, 11
 
 void setup() {
   button.begin();
@@ -32,15 +32,19 @@ void setup() {
 }
 
 void loop() {
-  button.update();
+  button.update(); 
+// This function must be called regularly in the code, 
+// otherwise the library will not work. 
+// However, it offers a high level of compatibility as it does not use interrupts.
+
   
-  // Tasterstatus abfragen
+// Query button status
   bool status = button.getButtonState();
   if (status) {
-    button.setRGB(0, 255, 0); // Grün, wenn gedrückt
+    button.setRGB(0, 255, 0); //the butten will glow green
     Serial.println("Button is pressed");
   } else {
-    button.pulseRGB(255, 0, 0); // Rot pulsieren, wenn nicht gedrückt
+    button.pulseRGB(255, 0, 0); //the butten pulses red. the luminosity is increased or reduced with the stadart value 30ms.
     Serial.println("Button is not pressed");
   }
 }
