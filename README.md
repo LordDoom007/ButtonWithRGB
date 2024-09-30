@@ -6,10 +6,10 @@ The **ButtonWithRGB library** makes it possible to easily control a button with 
 
 ## Functions
 
-- **Tastersteuerung**: Entprellung des Tasters für eine zuverlässige Erkennung.
-- **RGB-LED-Steuerung**: Setzen der LED-Farbe und Pulsieren mit einstellbarer Geschwindigkeit.
-- **Gamma-Korrektur**: Anpassung der Helligkeit der RGB-LED für eine lineare Wahrnehmung.
-- **Einstellbare Entprellzeit**: Anpassung der Entprellzeit für den Taster.
+- **Push-button control**: Debouncing of the push-button for reliable detection.
+- **RGB LED control**: Setting the LED colour and pulsing with adjustable speed.
+- **Gamma correction**: Adjusting the brightness of the RGB LED for linear perception.
+- **Adjustable debounce time**: Adjustment of the debounce time for the push-button.
 
 ## Installation
 
@@ -18,6 +18,9 @@ The **ButtonWithRGB library** makes it possible to easily control a button with 
 3. restart the Arduino IDE.
 
 ## Use
+```ButtonWithRGB button(2, 9, 10, 11);
+
+
 
 ### Simple example application
 
