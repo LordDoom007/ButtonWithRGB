@@ -12,6 +12,11 @@ The **ButtonWithRGB library** allows easy control of a button with an integrated
 - **Gamma correction**: Adjusting the brightness of the RGB LED for linear perception.
 - **Adjustable debounce time**: Adjustment of the debounce time for the push-button.
 
+## Important notes:
+
+ 1. the RGB LED pins are controlled negatively! Make sure that you use a button that has a permanent positive connection and is controlled with ground. This is usually labelled C+ for the positive supply and R, G, B for the negative side of the LED diode.
+ 2. The library uses the internal pull-up resistor, so it must be connected to ground. This means that the switch must be connected to GND on one terminal and to the pin used on the other terminal. In the following example, this is pin 2.
+
 ## Installation
 
 1. Download the `ButtonWithRGB` library or clone the repository.
@@ -29,10 +34,6 @@ Example for creating a button object with the pin assignment:
 - LED pin Red: 9
 - LED pin Green: 10
 - LED pin Blue: 11
-
-Attention:
-1. The RGB LED pins are controlled negatively!
-2. The button uses the internal pull-up resistor, so it must be connected to ground.
 
 #### Initialize object
 ```cpp
