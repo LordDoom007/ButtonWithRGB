@@ -5,7 +5,7 @@
 
 The **ButtonWithRGB library** allows easy control of a button with an integrated RGB LED. It provides functions for **debouncing the button** and **controlling the RGB LED colors**.
 
-(./RGB_button%201.PNG)
+![Alt-Text](./RGB_button%201.PNG)
 
 ## Functions
 
