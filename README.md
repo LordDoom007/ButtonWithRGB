@@ -22,10 +22,10 @@ The **ButtonWithRGB library** makes it possible to easily control a button with 
 ```ButtonWithRGB button(2, 9, 10, 11);```
 
 example for creating a butten object with the pin assignment:
-Buttons pin: 2 
-Led pin Red: 9
-led pin green: 10
-pin blue: 11
+- Buttons pin: 2 
+- Led pin Red: 9
+- led pin green: 10
+- pin blue: 11
 
 Attention:
 1. the RGB LED pins are controlled negatively!!!
