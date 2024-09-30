@@ -34,6 +34,8 @@ Example for creating a button object with the pin assignment:
 - LED pin Red: 9
 - LED pin Green: 10
 - LED pin Blue: 11
+note: make sure that you use a pin that is PWM compatible.
+more information about PWM: https://support.arduino.cc/hc/en-us/articles/9350537961500-Use-PWM-output-with-Arduino
 
 #### Initialize object
 ```cpp
