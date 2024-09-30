@@ -1,4 +1,5 @@
-# ButtonWithRGB Library
+# ButtonWithRGB Library 
+## for Pressure Button with RGB Lighting
 
 ## Overview
 
@@ -18,7 +19,7 @@ The **ButtonWithRGB library** makes it possible to easily control a button with 
 3. restart the Arduino IDE.
 
 ## Use
-### Create object
+#### Create object
 ```ButtonWithRGB button(2, 9, 10, 11);```
 
 example for creating a butten object with the pin assignment:
@@ -31,10 +32,33 @@ Attention:
 1. the RGB LED pins are controlled negatively!!!
 2. the butten uses the internal pulse resistor, so it must be connected to ground.
 
-### Initialise object
+#### Initialise object
 ```button.begin();```
+
 Start the previously created object
 
+#### Object update
+```button.update();```
+
+- This function must be called regularly in the code, 
+- otherwise the library will not work. 
+- However, it offers a high level of compatibility as it does not use interrupts.
+
+#### Query button
+``bool status = button.getButtonState();``
+
+Returns the status of the Debounced button as true or false
+
+#### set RGB colour
+``button.setRGB(0, 255, 0);``
+
+Set the RGB colour (0-255) 
+
+#### set RGB pulse colour
+``button.pulseRGB(255, 0, 0);``
+
+Set the pulse RGB colour (0-255)
+The LED pulses in the set colour. However, care must be taken not to use any process-blocking codes such as `delay();`. Otherwise the pulsing may be irregular or may not work at all.
 
 
 ### Simple example application
